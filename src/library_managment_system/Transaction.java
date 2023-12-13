@@ -54,6 +54,19 @@ public class Transaction {
 	    {
 	        return returnDate;
 	    }
+	    
+	    public void getTransactionInfo() 
+		{
+			System.out.println("Transaction ID is " + transactionId);
+			
+			System.out.println("BooK ID is " + bookId);
+			
+			System.out.println("User ID is " + userId);
+			
+			System.out.println("Checkoutdate is " + checkOutDate );
+			
+			System.out.println("return date is " + returnDate);
+		}
 
 	    // Setters
 

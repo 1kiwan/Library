@@ -1,5 +1,7 @@
 package library_managment_system;
 
+import java.util.Scanner;
+
 public class User {
 	
 	//attributes
@@ -8,6 +10,7 @@ public class User {
 	private String name;
 	private String contactInfo;
 	private String type;
+	private String password;
 	static private int numberOfUsers;
 	
 	//constructors
@@ -17,13 +20,20 @@ public class User {
 		this.id  = nextId++;
 	}
 	
-	User(String name, String type,String contactInfo)
+	User(String name, String type,String contactInfo,String password)
 	{
 		numberOfUsers++;
 		this.id  = nextId++;
 		this.contactInfo = contactInfo;
 		this.name = name;
 		this.type = type;
+		this.password = password;
+	}
+	
+	User(String name,String password)
+	{
+		this.name = name;
+		this.password = password;
 	}
 	
 	//getters
@@ -69,6 +79,12 @@ public class User {
 			{
 				return contactInfo;
 			}
+				
+				//7- password
+				public String getPassword()
+			{
+				return password;
+			}
 	//setters
 				
 				//1-id
@@ -94,5 +110,15 @@ public class User {
 				{
 					this.contactInfo = contactInfo;
 				}
+				
+				//5-password
+				public void setPassword(String password)
+				{
+					this.password = password;
+				}
+				
+				//methods
+				
+				
 
 }
